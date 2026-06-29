@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug C++", // 配置名称
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe", // 要调试的程序路径
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb", // 调试器模式若使用MinGW则设为gdb
+            "miDebuggerPath": "D:/app/msys64/ucrt64/bin/gdb.exe", // 指定gdb调试器路径
+            "preLaunchTask": "Build C++" // 调试前自动执行的任务名称
+        }
+    ]
+}

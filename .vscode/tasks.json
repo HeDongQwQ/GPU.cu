@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++", // 任务名称
+            "type": "shell",
+            "command": "g++", // 编译器命令，需确保已在PATH中
+            "args": [
+                "-std=c++17", "-g", // 使用C++17标准并生成调试信息
+                "${file}",          // 当前打开的源文件
+                "-o",               // 指定输出文件
+                "${fileDirname}/${fileBasenameNoExtension}.exe" // 输出文件名
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true   // 设为默认构建任务（按 Ctrl+Shift+B 触发）
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
